@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Volonter;
+namespace Volonter.Folder;
 
-public partial class EventsName
+public partial class StatusesRegister
 {
     public int Id { get; set; }
 
-    public string Event { get; set; } = null!;
+    public string Status { get; set; } = null!;
 
     public virtual ICollection<RegistersVolonter> RegistersVolonters { get; set; } = new List<RegistersVolonter>();
 }

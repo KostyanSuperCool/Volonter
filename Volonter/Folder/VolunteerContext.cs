@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Volonter;
+namespace Volonter.Folder;
 
 public partial class VolunteerContext : DbContext
 {

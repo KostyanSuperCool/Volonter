@@ -29,50 +29,35 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            panel1 = new Panel();
-            dataGridView1 = new DataGridView();
-            btnOut = new Button();
+            pnMain = new Panel();
             lblUserName = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnOut = new Button();
+            dgvProduct = new DataGridView();
+            pnMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvProduct).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // pnMain
             // 
-            panel1.Controls.Add(lblUserName);
-            panel1.Controls.Add(btnOut);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(10, 10);
-            panel1.Name = "panel1";
-            panel1.Padding = new Padding(0, 0, 0, 10);
-            panel1.Size = new Size(964, 40);
-            panel1.TabIndex = 0;
+            pnMain.Controls.Add(lblUserName);
+            pnMain.Controls.Add(btnOut);
+            pnMain.Dock = DockStyle.Top;
+            pnMain.Location = new Point(10, 10);
+            pnMain.Name = "pnMain";
+            pnMain.Padding = new Padding(0, 0, 0, 10);
+            pnMain.Size = new Size(964, 40);
+            pnMain.TabIndex = 0;
             // 
-            // dataGridView1
+            // lblUserName
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(10, 50);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(964, 601);
-            dataGridView1.TabIndex = 1;
+            lblUserName.AutoSize = true;
+            lblUserName.Dock = DockStyle.Right;
+            lblUserName.Location = new Point(769, 0);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(45, 19);
+            lblUserName.TabIndex = 6;
+            lblUserName.Text = "label1";
+            lblUserName.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btnOut
             // 
@@ -87,16 +72,31 @@
             btnOut.Text = "Войти";
             btnOut.UseVisualStyleBackColor = false;
             // 
-            // lblUserName
+            // dgvProduct
             // 
-            lblUserName.AutoSize = true;
-            lblUserName.Dock = DockStyle.Right;
-            lblUserName.Location = new Point(769, 0);
-            lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(45, 19);
-            lblUserName.TabIndex = 6;
-            lblUserName.Text = "label1";
-            lblUserName.TextAlign = ContentAlignment.MiddleRight;
+            dgvProduct.AllowUserToAddRows = false;
+            dgvProduct.AllowUserToDeleteRows = false;
+            dgvProduct.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvProduct.BackgroundColor = Color.White;
+            dgvProduct.BorderStyle = BorderStyle.None;
+            dgvProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
+            dgvProduct.Dock = DockStyle.Fill;
+            dgvProduct.Location = new Point(10, 50);
+            dgvProduct.MultiSelect = false;
+            dgvProduct.Name = "dgvProduct";
+            dgvProduct.ReadOnly = true;
+            dgvProduct.RowHeadersVisible = false;
+            dgvProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProduct.Size = new Size(964, 601);
+            dgvProduct.TabIndex = 1;
             // 
             // FormListOfEvents
             // 
@@ -104,24 +104,24 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(984, 661);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel1);
+            Controls.Add(dgvProduct);
+            Controls.Add(pnMain);
             Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "FormListOfEvents";
             Padding = new Padding(10);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormListOfEvents";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            pnMain.ResumeLayout(false);
+            pnMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvProduct).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private DataGridView dataGridView1;
+        private Panel pnMain;
+        private DataGridView dgvProduct;
         private Label lblUserName;
         private Button btnOut;
     }

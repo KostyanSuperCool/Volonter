@@ -62,17 +62,17 @@ public partial class VolunteerContext : DbContext
             entity.Property(e => e.NameEvents).HasColumnName("name_events");
             entity.Property(e => e.Place).HasColumnName("place");
 
-            entity.HasOne(d => d.IdCategoriesNavigation).WithMany(p => p.Events)
+            entity.HasOne(d => d.Category).WithMany(p => p.Events)
                 .HasForeignKey(d => d.IdCategories)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("events_id_categories_fkey");
 
-            entity.HasOne(d => d.IdStatusEventsNavigation).WithMany(p => p.Events)
+            entity.HasOne(d => d.StatusesEvent).WithMany(p => p.Events)
                 .HasForeignKey(d => d.IdStatusEvents)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("events_id_status_events_fkey");
 
-            entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.Events)
+            entity.HasOne(d => d.User).WithMany(p => p.Events)
                 .HasForeignKey(d => d.IdUser)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("events_id_user_fkey");
@@ -100,17 +100,17 @@ public partial class VolunteerContext : DbContext
             entity.Property(e => e.IdStatusRegister).HasColumnName("id_status_register");
             entity.Property(e => e.IdUser).HasColumnName("id_user");
 
-            entity.HasOne(d => d.IdEventsNavigation).WithMany(p => p.RegistersVolonters)
+            entity.HasOne(d => d.EventsName).WithMany(p => p.RegistersVolonters)
                 .HasForeignKey(d => d.IdEvents)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("registers_volonter_id_events_fkey");
 
-            entity.HasOne(d => d.IdStatusRegisterNavigation).WithMany(p => p.RegistersVolonters)
+            entity.HasOne(d => d.StatusesRegister).WithMany(p => p.RegistersVolonters)
                 .HasForeignKey(d => d.IdStatusRegister)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("registers_volonter_id_status_register_fkey");
 
-            entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.RegistersVolonters)
+            entity.HasOne(d => d.User).WithMany(p => p.RegistersVolonters)
                 .HasForeignKey(d => d.IdUser)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("registers_volonter_id_user_fkey");
@@ -159,7 +159,7 @@ public partial class VolunteerContext : DbContext
             entity.Property(e => e.Name).HasColumnName("name");
             entity.Property(e => e.Password).HasColumnName("password");
 
-            entity.HasOne(d => d.IdRoleNavigation).WithMany(p => p.Users)
+            entity.HasOne(d => d.Role).WithMany(p => p.Users)
                 .HasForeignKey(d => d.IdRole)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("users_id_role_fkey");

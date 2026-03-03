@@ -41,13 +41,13 @@ namespace Volonter
                 }
                 else
                 {
-                    MessageBox.Show("Вы неправильно написали логин или пароль", "Ошибка",
+                   MessageBox.Show("Вы неправильно написали логин или пароль", "Ошибка",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-        private void btnGuest_Click(object sender, EventArgs e)
+        private void BtnGuest_Click(object sender, EventArgs e)
         {
             CurrentUser = null;
             IsGuest = true;

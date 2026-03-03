@@ -21,9 +21,9 @@ public partial class Event
 
     public int IdStatusEvents { get; set; }
 
-    public virtual Category IdCategoriesNavigation { get; set; } = null!;
+    public virtual Category Category { get; set; } = null!;
 
-    public virtual StatusesEvent IdStatusEventsNavigation { get; set; } = null!;
+    public virtual StatusesEvent StatusesEvent { get; set; } = null!;
 
-    public virtual User IdUserNavigation { get; set; } = null!;
+    public virtual User User { get; set; } = null!;
 }
